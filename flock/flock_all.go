@@ -1,11 +1,8 @@
-// +build !aix,!windows
-
 package flock
 
 import (
 	"os"
-
-	"golang.org/x/sys/unix"
+	"syscall"
 )
 
 func lock_sys(path string, nonBlocking bool) (_ *os.File, err error) {
@@ -22,12 +19,12 @@ func lock_sys(path string, nonBlocking bool) (_ *os.File, err error) {
 		}
 	}()
 
-	flag := unix.LOCK_EX
+	flag := syscall.LOCK_EX
 	if nonBlocking {
-		flag |= unix.LOCK_NB
+		flag |= syscall.LOCK_NB
 	}
 
-	err = unix.Flock(int(fh.Fd()), flag)
+	err = syscall.Flock(int(fh.Fd()), flag)
 	if err != nil {
 		return nil, err
 	}
@@ -60,16 +57,16 @@ func rm_if_match(fh *os.File, path string) error {
 
 func sameInodes(f *os.File, path string) bool {
 	// get inode from opened file f:
-	var fstat unix.Stat_t
-	err := unix.Fstat(int(f.Fd()), &fstat)
+	var fstat syscall.Stat_t
+	err := syscall.Fstat(int(f.Fd()), &fstat)
 	if err != nil {
 		return false
 	}
 	fileIno := fstat.Ino
 
 	// get inode for path on disk:
-	var dstat unix.Stat_t
-	err = unix.Stat(path, &dstat)
+	var dstat syscall.Stat_t
+	err = syscall.Stat(path, &dstat)
 	if err != nil {
 		return false
 	}
