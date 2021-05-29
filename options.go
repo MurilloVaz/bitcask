@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/prologic/bitcask/internal/config"
+	"github.com/MurilloVaz/bitcask/internal/config"
 )
 
 const (

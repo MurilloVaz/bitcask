@@ -3,8 +3,8 @@ package index
 import (
 	"os"
 
+	"github.com/MurilloVaz/bitcask/internal"
 	art "github.com/plar/go-adaptive-radix-tree"
-	"github.com/prologic/bitcask/internal"
 )
 
 // Indexer is an interface for loading and saving the index (an Adaptive Radix Tree)

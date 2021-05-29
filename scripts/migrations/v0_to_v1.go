@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/prologic/bitcask/internal"
+	"github.com/MurilloVaz/bitcask/internal"
 )
 
 const (

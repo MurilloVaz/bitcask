@@ -28,7 +28,7 @@ install: build
 	@go install ./cmd/bitcaskd/...
 
 image:
-	@docker build -t prologic/bitcask .
+	@docker build -t MurilloVaz/bitcask .
 
 release:
 	@./tools/release.sh

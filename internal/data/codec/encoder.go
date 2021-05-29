@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"io"
 
+	"github.com/MurilloVaz/bitcask/internal"
 	"github.com/pkg/errors"
-	"github.com/prologic/bitcask/internal"
 )
 
 const (

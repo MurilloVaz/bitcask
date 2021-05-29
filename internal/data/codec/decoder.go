@@ -5,8 +5,8 @@ import (
 	"io"
 	"time"
 
+	"github.com/MurilloVaz/bitcask/internal"
 	"github.com/pkg/errors"
-	"github.com/prologic/bitcask/internal"
 )
 
 var (

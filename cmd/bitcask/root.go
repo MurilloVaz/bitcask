@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/prologic/bitcask/internal"
+	"github.com/MurilloVaz/bitcask/internal"
 )
 
 // RootCmd represents the base command when called without any subcommands

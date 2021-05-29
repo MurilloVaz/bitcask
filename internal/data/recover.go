@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/prologic/bitcask/internal"
-	"github.com/prologic/bitcask/internal/config"
-	"github.com/prologic/bitcask/internal/data/codec"
+	"github.com/MurilloVaz/bitcask/internal"
+	"github.com/MurilloVaz/bitcask/internal/config"
+	"github.com/MurilloVaz/bitcask/internal/data/codec"
 )
 
 // CheckAndRecover checks and recovers the last datafile.

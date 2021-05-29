@@ -13,15 +13,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/MurilloVaz/bitcask/flock"
+	"github.com/MurilloVaz/bitcask/internal"
+	"github.com/MurilloVaz/bitcask/internal/config"
+	"github.com/MurilloVaz/bitcask/internal/data"
+	"github.com/MurilloVaz/bitcask/internal/data/codec"
+	"github.com/MurilloVaz/bitcask/internal/index"
+	"github.com/MurilloVaz/bitcask/internal/metadata"
+	"github.com/MurilloVaz/bitcask/scripts/migrations"
 	art "github.com/plar/go-adaptive-radix-tree"
-	"github.com/prologic/bitcask/flock"
-	"github.com/prologic/bitcask/internal"
-	"github.com/prologic/bitcask/internal/config"
-	"github.com/prologic/bitcask/internal/data"
-	"github.com/prologic/bitcask/internal/data/codec"
-	"github.com/prologic/bitcask/internal/index"
-	"github.com/prologic/bitcask/internal/metadata"
-	"github.com/prologic/bitcask/scripts/migrations"
 	log "github.com/sirupsen/logrus"
 )
 

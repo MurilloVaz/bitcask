@@ -1,5 +1,5 @@
 # Build
-FROM prologic/go-builder:latest AS build
+FROM MurilloVaz/go-builder:latest AS build
 
 # Runtime
 FROM alpine

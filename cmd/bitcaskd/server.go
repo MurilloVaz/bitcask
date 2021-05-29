@@ -12,7 +12,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/redcon"
 
-	"github.com/prologic/bitcask"
+	"github.com/MurilloVaz/bitcask"
 )
 
 type server struct {
@@ -43,7 +43,7 @@ func (s *server) handleSet(cmd redcon.Command, conn redcon.Conn) {
 	var opts []bitcask.PutOptions
 	if len(cmd.Args) == 4 {
 		ttl, _ := binary.Varint(cmd.Args[3])
-		e := time.Now().UTC().Add(time.Duration(ttl)*time.Millisecond)
+		e := time.Now().UTC().Add(time.Duration(ttl) * time.Millisecond)
 		opts = append(opts, bitcask.WithExpiry(e))
 	}
 

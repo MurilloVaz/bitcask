@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"io"
 
+	"github.com/MurilloVaz/bitcask/internal"
 	"github.com/pkg/errors"
 	art "github.com/plar/go-adaptive-radix-tree"
-	"github.com/prologic/bitcask/internal"
 )
 
 var (
